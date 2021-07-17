@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Ubuntu', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    height: 10000px;
+}
+.container{
+    display: grid;
+}
+.header{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 15px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+.header.sticky{
+    background-color: orange;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+}
+.header.sticky .list-menu a{
+    color: white;
+}
+.header.sticky .list-menu a:hover{
+    color: black;
+}
+.logo{
+    text-decoration: none;
+    font-size: 1.7em;
+    font-weight: 600;
+    margin-left: 50px;
+}
+.logo a{
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+}
+.header .list-menu{
+    gap: 40px;
+}
+.list-menu ul{
+    display: grid;
+    list-style: none;
+    grid-auto-flow: column;
+}
+.list-menu a{
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    transition: color 0.5s ease;
+}
+.list-menu a:hover{
+    color: orange;
+}
+.bars{
+    display: none;
+}
+
+/* home styling */
+#home{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'kiri kanan' 
+    'kiri kanan';
+    gap: 10px;
+    height: 100vh;
+    /* background-color: red; */
+}
+.kiri{
+    grid-area: kiri;
+    margin-top: 30%;
+    margin-left: 50px;
+}
+.emoji{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+}
+.kanan{
+    grid-area: kanan;
+    margin-top: 30%;
+    margin-right: 50px;
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+.kiri .name{
+    font-size: 2.2em;
+}
+.kiri .profesi{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: orange;
+}
+.kiri p{
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+.kiri a{
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 8px;
+    background: orange;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+}
+
+.kiri a:hover{
+    background: none;
+    color: orange;
+}
+.kanan{
+    display: grid;
+    justify-content: end;
+    position: relative;
+    top: -20px;
+}
+.kanan img{
+    height: 350px;
+    width: 350px;
+}
+
+
+/* about styling */
+#about{
+    background-color: #ddd;
+    position: relative;
+}
+.judul-utama{
+    font-size: 2em;
+    text-align: center;
+    margin: 50px 0;
+    z-index: 2;
+    position: relative;
+}
+.judul-utama::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    top: 50%;
+    height: 20px;
+    width: 90px;
+    background: orange;
+    transform: translateX(-50%);
+    z-index: -1;
+    border-radius: 5px;
+}
+#about .card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 0 50px;
+    margin-bottom: 50px;
+}
+#about .card .items{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    /* margin-bottom: 50px; */
+}
+#about .card .items:hover .judul{
+    font-size: 1.7em;
+}
+#about .card .judul{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 5px;
+    transition: all 0.5s ease;
+}
+#about .card p{
+    font-size: 15px;
+    color: rgb(134, 133, 133);
+}
+#about .card .items span i{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#about .card .items:hover span i{
+    color: orange;
+}
+
+/* skils */
+#skils .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    
+}
+.content .kiri-skils{
+    display: grid;
+    margin-left: 60px;
+}
+.content .kiri-skils .judul{
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+.content .kiri-skils p{
+    margin-bottom: 30px;
+}
+.content img{
+    height: 80px;
+    width: 80px;
+}
+.content .kiri-skils .img{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+    gap: 50px;
+    justify-content: center;
+    /* background: red; */
+}
+
+.content .card-skils{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-right: 50px;
+    /* background-color: red; */
+}
+.card-skils .card{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    background: #ddd;
+    border-radius: 10px;
+    justify-content: center;
+}
+.card-skils .card .text{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.card-skils .card p{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 768px){
+    .header.sticky{
+        padding: 10px;
+    }
+    .header .list-menu ul{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        width: 100%;
+        top: -1000px;
+        left: 0;
+        background-color: white;
+        transition: all 1s ease;
+        z-index: 80;
+        font-size: 1.5em;
+    }
+    .logo{
+        margin-left: 20px;
+    }
+    .header.sticky .list-menu a{
+        color: orange;
+    }
+    .header .list-menu.active ul{
+        top: 0;
+    }
+    .header .list-menu ul li{
+        padding: 50px;
+    }
+    .header .bars{
+        display: block;
+        position: absolute;
+        top: 30%;
+        bottom: 0;
+        left: 90%;
+        font-size: 1.5em;
+        z-index: 999;
+        cursor: pointer;
+    }
+    .header .bars i.active:before{
+        content: "\f00d";
+    }
+    #home{
+        grid-template-areas: 
+        'kanan kanan' 
+        'kiri kiri';
+    }
+    .kiri{
+        margin: 20px;
+        margin-top: -10%;
+        text-align: center;
+    }
+    .kiri .name, .profesi{
+        font-size: 2em;
+    }
+    .kiri .emoji{
+        display: none;
+    }
+    .kanan{
+        margin-top: 15%;
+        margin-right: 0;
+        justify-content: center;
+    }
+    .kanan img{
+        width: 300px;
+        height: 300px;
+    }
+    #about .items{
+        margin: 10px;
+    }
+    #about .card{
+        margin: 50px 15px;
+    }
+    #skils .content{
+        grid-template-columns: 1fr;
+    }
+    .content .kiri-skils{
+        margin: 15px;
+    }
+    .kanan-skils .card-skils{
+        display: grid;
+        margin: 15px;
+    }
+    .content .kiri-skils .img{
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .kiri{
+        margin-top: -100px;
+    }
+    .kanan img{
+        margin-top: 30px;
+    }
+    .kiri .name{
+        font-size: 1.5em;
+    }
+}
