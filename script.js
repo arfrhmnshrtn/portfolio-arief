@@ -3,7 +3,7 @@ const bars = header.querySelector('.bars');
 const nav = document.querySelector('.header .list-menu');
 const navBar = document.querySelector('.header .bars i')
 window.addEventListener("scroll", function(event) {
-    if(this.scrollY > 20){
+    if(this.scrollY > 50){
         header.classList.add("sticky");
     }else{
         header.classList.remove("sticky");

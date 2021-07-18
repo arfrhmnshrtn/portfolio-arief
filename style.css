@@ -156,9 +156,9 @@ body{
 
 
 /* about styling */
-#about{
+#about, #projek{
     background-color: #ddd;
-    position: relative;
+    margin-bottom: 50px;
 }
 .judul-utama{
     font-size: 2em;
@@ -227,7 +227,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    
+    margin-bottom: 50px;
 }
 .content .kiri-skils{
     display: grid;
@@ -249,7 +249,6 @@ body{
     grid-template-columns: repeat(3, 1fr );
     gap: 50px;
     justify-content: center;
-    /* background: red; */
 }
 
 .content .card-skils{
@@ -257,14 +256,13 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
     margin-right: 50px;
-    /* background-color: red; */
 }
 .card-skils .card{
     padding: 10px;
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    background: #ddd;
+    background: rgb(243, 243, 243);
     border-radius: 10px;
     justify-content: center;
 }
@@ -276,6 +274,87 @@ body{
 .card-skils .card p{
     font-size: 15px;
     color: rgba(0, 0, 0, 0.5);
+}
+
+/* projek */
+.projek .atas{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+}
+.projek .atas .judul .text{
+    font-size: 1.5em;
+}
+.projek .atas .judul p{
+    color: rgba(0, 0, 0, 0.5);
+}
+.projek .bawah{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.projek .bawah img{
+    margin: 50px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+
+.projek .bawah img:hover{
+    opacity: 0.5;
+}
+.projek .atas .btn button{
+    background: orange;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.projek .atas .btn button:hover{
+    background: none;
+    border: 1px solid orange;
+    color: orange;
+}
+
+/* contact */
+.contact .contact-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact .contact-content .coulmn{
+    margin: 50px;
+}
+.contact .contact-content .left h2, p{
+    margin-bottom: 20px;
+}
+.contact .contact-content .right h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact .contact-content .right .fields{
+    text-align: center;
+    background-color: red;
+}
+.contact .contact-content .right .fields .inpt{
+    display: flex;
+    justify-content: center;
+}
+.contact .contact-content .right .inpt input{
+    height: 40px;
+    width: 100%;
+    /* margin: 0 10px; */
+}
+.contact .contact-content .right .inpt input:nth-child(1){
+    margin-right: 10px;
+}
+.contact .contact-content .right .subject input{
+    width: 100%;
+    height: 40px;
+    /* margin: 10px; */
 }
 @media screen and (max-width: 768px){
     .header.sticky{
@@ -363,9 +442,15 @@ body{
     .content .kiri-skils .img{
         gap: 30px;
     }
+    .projek .bawah img{
+        margin: 15px;
+    }
 }
 
 @media screen and (max-width: 480px){
+    .header .bars{
+        left: 80%;
+    }
     .kiri{
         margin-top: -100px;
     }
@@ -374,5 +459,35 @@ body{
     }
     .kiri .name{
         font-size: 1.5em;
+    }
+    .projek .atas{
+        margin: 15px;
+    }
+    .projek .bawah{
+        flex-direction: column;
+    }
+    .projek .bawah img{
+        margin: 15px;
+    }
+    .projek .atas .judul .text{
+        font-size: 1em;
+    }
+    .projek .atas .judul p{
+        font-size: 0.7em;
+    }
+    .projek .atas .btn{
+        border-color: red;
+    }
+    .projek .atas .btn button{
+        background: orange;
+        border: none;
+        padding: 3px 10px;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 0.7em;
+    }
+    .content img{
+        height: 50px;
+        width: 50px;
     }
 }
