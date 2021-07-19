@@ -2,15 +2,15 @@
 *{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
 html{
     scroll-behavior: smooth;
 }
-body{
+/* body{
     height: 10000px;
-}
+} */
 .container{
     display: grid;
 }
@@ -174,7 +174,7 @@ body{
     left: 50%;
     top: 50%;
     height: 20px;
-    width: 90px;
+    width: 120px;
     background: orange;
     transform: translateX(-50%);
     z-index: -1;
@@ -321,40 +321,74 @@ body{
 }
 
 /* contact */
-.contact .contact-content{
+.contact .content-contact{
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-.contact .contact-content .coulmn{
+    gap: 100px;
     margin: 50px;
 }
-.contact .contact-content .left h2, p{
+.contact .content-contact .kiri-contact h2{
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+.contact .content-contact .kiri-contact p{
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
-.contact .contact-content .right h1{
+.contact .content-contact .kiri-contact .cloud{
+    margin-bottom: 30px;
+}
+.contact .content-contact .kiri-contact p{
+    color: rgba(0, 0, 0, 0.5);
+}
+.contact .content-contact .kanan-contact{
+    display: grid;
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+}
+.contact .content-contact .kanan-contact form{
+    display: grid;
+}
+.contact .content-contact .kanan-contact form h2{
     text-align: center;
     margin-bottom: 20px;
 }
-.contact .contact-content .right .fields{
-    text-align: center;
-    background-color: red;
-}
-.contact .contact-content .right .fields .inpt{
-    display: flex;
-    justify-content: center;
-}
-.contact .contact-content .right .inpt input{
+.contact .content-contact .kanan-contact form .name input, .email input{
     height: 40px;
     width: 100%;
-    /* margin: 0 10px; */
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    padding-left: 20px;
+    font-size: 1em;
 }
-.contact .contact-content .right .inpt input:nth-child(1){
-    margin-right: 10px;
-}
-.contact .contact-content .right .subject input{
+.contact .content-contact .kanan-contact form .textarea textarea{
     width: 100%;
-    height: 40px;
-    /* margin: 10px; */
+    height: 150px;
+    border-radius: 5px;
+    resize: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    padding: 20px;
+    font-size: 1em;
+}
+.contact .content-contact .kanan-contact form .btn button{
+    padding: 10px 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid orange;
+    background: orange;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.contact .content-contact .kanan-contact form .btn button:hover{
+    background: none;
+    border: 1px solid orange;
+    color: orange;
 }
 @media screen and (max-width: 768px){
     .header.sticky{
@@ -444,6 +478,9 @@ body{
     }
     .projek .bawah img{
         margin: 15px;
+    }
+    .contact .content-contact{
+        grid-template-columns: 1fr;
     }
 }
 

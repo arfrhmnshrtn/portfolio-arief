@@ -15,3 +15,4 @@ bars.addEventListener('click', function(){
     nav.classList.toggle('active');
     navBar.classList.toggle('active');
 });
+
