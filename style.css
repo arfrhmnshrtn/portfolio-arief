@@ -390,6 +390,77 @@ html{
     border: 1px solid orange;
     color: orange;
 }
+
+/* footer */
+#footer{
+    height: 200px;
+    background: black;
+    overflow: hidden;
+}
+#footer .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 60%;
+}
+#footer .wrapper .icon a{
+    font-size: 2.3em;
+    color: #fff;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#footer .wrapper .icon p{
+    color: black;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    position: relative;
+    transition: all 0.5s ease;
+    top: -100px;
+    /* z-index: 999; */
+}
+#footer .wrapper .icon p::before{
+    content: "";
+    position: absolute;
+    /* right: 100px; */
+    top: 30px;
+    left: 32%;
+    height: 15px;
+    width: 15px;
+    background: white;
+    transform: rotate(45deg);
+}
+#footer .text-footer .copyright{
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 10px;
+    height: 40%;
+    letter-spacing: 5px;
+    
+}
+#footer .wrapper .icon:hover p{
+    color: #000;
+    display: block;
+    top: 0;
+}
+#footer .wrapper .fb a:hover{
+    color: #3b5998;
+}
+#footer .wrapper .ig a:hover{
+    color: #E1306C;
+}
+#footer .wrapper .wa a:hover{
+    color: #4FCE5D;
+}
+#footer .wrapper .github a:hover{
+    color: rgb(85, 82, 82);
+}
 @media screen and (max-width: 768px){
     .header.sticky{
         padding: 10px;
@@ -479,12 +550,22 @@ html{
     .projek .bawah img{
         margin: 15px;
     }
+    
     .contact .content-contact{
         grid-template-columns: 1fr;
     }
+    .contact .content-contact .kiri-contact{
+        margin-bottom: 0;
+    }
+    .contact .content-contact .kanan-contact{
+        margin-top: -80px;
+    }
+    .contact .content-contact .kiri-contact .cloud{
+        margin-bottom: 10px;
+    }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 558px){
     .header .bars{
         left: 80%;
     }
@@ -526,5 +607,11 @@ html{
     .content img{
         height: 50px;
         width: 50px;
+    }
+    .contact .content-contact{
+        margin: 15px;
+    }
+    #footer .wrapper .icon a{
+        font-size: 2em;
     }
 }
