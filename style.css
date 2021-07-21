@@ -199,6 +199,7 @@ html{
 }
 #about .card .items:hover .judul{
     font-size: 1.7em;
+    color: orange;
 }
 #about .card .judul{
     font-size: 1.5em;
@@ -260,22 +261,135 @@ html{
 .card-skils .card{
     padding: 10px;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    background: rgb(243, 243, 243);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    /* background: rgb(243, 243, 243); */
     border-radius: 10px;
     justify-content: center;
 }
 .card-skils .card .text{
     font-size: 1.5em;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+.card-skils .card span{
+    font-size: 2.5em;
+    color: orange;
 }
 .card-skils .card p{
     font-size: 15px;
     color: rgba(0, 0, 0, 0.5);
 }
 
+.skills-section{
+padding-top: 20px;
+}
+
+.skills-header{
+text-align: center;
+color: #fff;
+padding: 1rem;
+position: relative;
+}
+
+.skills-header:after{
+content: '';
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 100px;
+height: 4px;
+background-color: #2ecc71;
+border-radius: 2px;
+}
+
+.skills-container{
+display: grid;
+grid-tempLate-columns: repeat(5, 1fr);
+justify-content:center;
+align-items:center;
+text-align: center;
+grid-gap:1rem;
+padding: 1rem 80px;
+font-size: 1.2rem;
+}
+.skills-box{
+padding: 1rem;
+color: #000;
+cursor:pointer;
+}
+.skills-box:hover > .skills-title: after, 
+.skills-box:hover > .skills-title: before{
+width: 30px;
+}
+.skills-box:hover .skills-img{
+transform: translateX(-20px);
+}
+
+.skills-title{
+display:flex;
+flex-direction: column;
+align-items:center;
+padding: 0.5rem;
+margin-bottom: 0.5rem;
+position: relative;
+}
+
+.skills-title:after{
+content: '';
+position:absolute;
+bottom: 0;
+rigth: 50%;
+width:20px;
+height:4px;
+border-radius: 2px 0 0 2px;
+background-color: #2ecc71;
+transition: .5s;
+}
+
+.skills-title:before{
+content: '';
+position:absolute;
+bottom: 0;
+left: 50%;
+width:100px;
+height:4px;
+border-radius: 0 2px 2px 0;
+background-color: #2ecc71;
+}
+
+.skills-icons{
+width:50px;
+z-index:2;
+}
+
+.skills-img{
+width:90px;
+height:90px;
+position: relative;
+border-radius: 45px;
+background-color: #fff;
+display:flex;
+justify-content:center;
+align-items:center;
+transition: .5s;
+}
+
+.skills-img:after{
+content: '';
+position:absolute;
+top:0;
+left: 0;
+width:50%;
+height:90px;
+background: rgba(100, 100, 100, 0.5);
+border-radius: 45px 0 0 45px;
+}
+.skills-title h3{
+color: #333;
+margin-top: 0.5rem;
+}
 /* projek */
 .projek .atas{
     display: flex;
@@ -364,6 +478,9 @@ html{
     padding-left: 20px;
     font-size: 1em;
 }
+.contact .content-contact .kanan-contact form .name input:focus, .email input:focus{
+    border: 2px solid orange;
+}
 .contact .content-contact .kanan-contact form .textarea textarea{
     width: 100%;
     height: 150px;
@@ -374,6 +491,9 @@ html{
     padding: 20px;
     font-size: 1em;
 }
+.contact .content-contact .kanan-contact form .textarea textarea:focus{
+    border: 2px solid orange;
+}
 .contact .content-contact .kanan-contact form .btn button{
     padding: 10px 40px;
     margin-top: 10px;
@@ -383,6 +503,7 @@ html{
     background: orange;
     color: white;
     cursor: pointer;
+    font-size: 1.1em;
     transition: all 0.5s ease;
 }
 .contact .content-contact .kanan-contact form .btn button:hover{
@@ -437,7 +558,7 @@ html{
 }
 #footer .text-footer .copyright{
     color: white;
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-align: center;
     margin-top: 10px;
     height: 40%;
@@ -586,6 +707,7 @@ html{
     }
     .projek .bawah img{
         margin: 15px;
+        height: 250px;
     }
     .projek .atas .judul .text{
         font-size: 1em;
