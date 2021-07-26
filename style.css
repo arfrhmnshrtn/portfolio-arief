@@ -67,6 +67,9 @@ html{
 .list-menu a:hover{
     color: orange;
 }
+.list-menu ul li a:active{
+    background: red;
+}
 .bars{
     display: none;
 }
@@ -755,9 +758,9 @@ transform: translateX(-20px);
 }
 
 @media screen and (max-width: 558px){
-    .header .bars{
+    /* .header .bars{
         left: 90%;
-    }
+    } */
     .kiri{
         margin-top: -100px;
     }
@@ -770,7 +773,6 @@ transform: translateX(-20px);
     #about .card .items span i{
         left: 90%;
         padding: 5px;
-        /* background: orange; */
     }
     .content .kiri-skils .img{
         gap: 50px;

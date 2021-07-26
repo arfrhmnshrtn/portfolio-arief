@@ -5,9 +5,14 @@ const navBar = document.querySelector('.header .bars i');
 const cardAbout = document.querySelectorAll('#about .card');
 const btnCardAbout = document.querySelectorAll('#about .card i');
 const textHidden = document.querySelector('#about .card .hidden');
-console.log(btnCardAbout)
 
+// navbar
+bars.addEventListener('click', function(){
+    nav.classList.toggle('active');
+    navBar.classList.toggle('active');
+});
 
+// navbar sticky
 window.addEventListener("scroll", function(event) {
     if(this.scrollY > 50){
         header.classList.add("sticky");
