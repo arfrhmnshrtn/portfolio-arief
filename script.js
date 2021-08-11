@@ -29,7 +29,7 @@ btnCardAbout.forEach(el => {
     });
 });
 
-let typed = new Typed('.profesi', {
+let typed = new Typed('.typing', {
     strings: ["Developer", "Designer", "Freelancer"],
     typeSpeed: 100,
     backSpeed: 60,
